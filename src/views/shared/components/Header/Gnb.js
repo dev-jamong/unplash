@@ -1,20 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import {IconLogo} from "../../../../icons";
-import Nav from "./Nav";
-import SearchBox from "../SearchBox";
+import { Link } from 'react-router-dom';
 
-const Gnb = () => {
-  return (
-    <Container>
-        <Logo>
-            <IconLogo/>
-        </Logo>
-        <SearchBox/>
-        <Nav/>
-    </Container>
-  );
-}
+import { IconLogo } from '../../../../icons';
+import Nav from './Nav';
+import SearchBox from '../SearchBox';
+
+const Gnb = () => (
+  <Container>
+    <Logo to="/">
+      <IconLogo />
+    </Logo>
+    <SearchBox shape="round" />
+    <Nav />
+  </Container>
+);
 
 const Container = styled.div`
   display: flex;
@@ -24,7 +24,7 @@ const Container = styled.div`
 
 `;
 
-const Logo = styled.div`
+const Logo = styled(Link)`
     margin-right: 25px;
 `;
 

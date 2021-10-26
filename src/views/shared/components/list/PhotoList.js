@@ -1,27 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
-import PhotoItem from "../item/PhotoItem";
+import { chunk } from 'lodash';
 
-const PhotoList = ({data}) => {
-    return (
-        <Container>
-            <Row>
-                {
-                    data.map((item) => (
-                        <Col>
-                            <PhotoItem item={item}/>
-                        </Col>
+import PhotoItem from '../item/PhotoItem';
 
-                    ))
-                }
-            </Row>
-        </Container>
-    );
-}
+const PhotoList = ({ data }) => {
+  const a = 1;
+
+  const result = chunk([data], 4);
+  console.log(result);
+  return (
+    <Container>
+      <Row>
+        {
+          data.map((item) => (
+            <Col>
+              <PhotoItem item={item}/>
+            </Col>
+
+          ))
+        }
+      </Row>
+    </Container>
+  );
+};
 
 const Container = styled.div`
   max-width: 800px;
   margin: 0 auto;
+  padding: 20px 0;
 `;
 
 const Row = styled.div`
