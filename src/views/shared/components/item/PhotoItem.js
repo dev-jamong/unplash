@@ -12,7 +12,7 @@ const PhotoItem = ({ item }) => {
 
 const Container = styled.div`
   img {
-    height: 270px;
+    height: auto;
     width: 100%;
     object-fit: cover;
   }

@@ -9,7 +9,7 @@ import Visual from '../components/Visual';
 
 const MainContainer = () => {
   const [photos, setPhotos] = useState([]);
-  console.log({ BASE_UNSPLASH_API_URL });
+  // console.log({ BASE_UNSPLASH_API_URL });
 
   const getPhotos = async () => {
     const config = {
@@ -21,7 +21,7 @@ const MainContainer = () => {
       },
     };
     const result = await axios(config);
-    console.log({ result });
+    // console.log({ result });
     setPhotos(result.data);
   };
 

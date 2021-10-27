@@ -16,7 +16,7 @@ const SearchBox = ({ shape }) => {
 
   const onChange = (e) => {
     setValue(e.target.value);
-    console.log('@@@.e.target', e.target.value);
+    // console.log('@@@.e.target', e.target.value);
   };
   // ZepPXzFL3PNNTm3dBXoI6Bq3sWMu_hCFYdxDjF7jV2M
   const onSubmit = (e) => {

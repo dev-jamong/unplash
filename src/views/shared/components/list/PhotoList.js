@@ -1,32 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
-import { chunk } from 'lodash';
+import _ from 'lodash';
 
 import PhotoItem from '../item/PhotoItem';
+import { recomposeData } from '../../../../lib/photo';
 
 const PhotoList = ({ data }) => {
-  const a = 1;
+  // console.log(data);
 
-  const result = chunk([data], 4);
-  console.log(result);
+  const composedData = recomposeData(data);
+
   return (
     <Container>
       <Row>
         {
-          data.map((item) => (
+          composedData.map((groups) => (
             <Col>
-              <PhotoItem item={item}/>
+              {
+                groups.map((item) => (
+                  <ItemWrpper>
+                    <PhotoItem item={item}/>
+                  </ItemWrpper>
+                ))
+              }
             </Col>
-
           ))
         }
+
       </Row>
     </Container>
   );
 };
 
 const Container = styled.div`
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px 0;
 `;
@@ -40,8 +47,10 @@ const Row = styled.div`
 const Col = styled.div`
   width: 33.3%;
   padding: 0 10px;
-  margin-bottom: 20px;
+`;
 
+const ItemWrpper = styled.div`
+  margin-bottom: 20px;
 `;
 
 export default PhotoList;

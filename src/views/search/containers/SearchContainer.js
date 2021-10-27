@@ -36,7 +36,7 @@ const SearchContainer = () => {
     const result = await axios(config);
     SetResultPhotos(result.data);
   };
-  console.log(resultPhotos);
+  // console.log(resultPhotos);
   useEffect(() => {
     searchPhotos();
   }, [query]);

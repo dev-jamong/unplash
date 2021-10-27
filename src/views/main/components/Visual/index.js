@@ -20,7 +20,7 @@ const Visual = () => (
 const Container = styled.div`
   position: relative;
   height: 560px;
-  background: url("https://images.unsplash.com/photo-1634829404697-8ec4e0d2ac28?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80") center center/cover no-repeat;
+  background: url("https://images.unsplash.com/photo-1634993110670-474eb7f62e8d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1803&q=80") center center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +31,7 @@ const Contents = styled.div`
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width:800px;
+  max-width:1200px;
   margin: 0 auto;
   h1 {
     font-size: 46px;
